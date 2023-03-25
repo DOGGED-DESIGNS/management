@@ -1,0 +1,27 @@
+$primary: #e3dff0;
+
+$accent: #00311d;
+$accent: #005a34;
+
+$secondary: #f9f6fb;
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgb(47, 72, 88);
+  background: linear-gradient(
+    322deg,
+    rgba(47, 72, 88, 1) 0%,
+    rgba(52, 73, 107, 1) 50%,
+    rgba(147, 39, 91, 1) 100%
+  );
+  &__form {
+    width: 350px;
+    height: auto;
+    padding: 15px;
+    background: $secondary;
+    border-radius: 8px;
+  }
+}

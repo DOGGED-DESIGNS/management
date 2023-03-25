@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./Login.scss";
+import "./Signup.scss";
 import "../../App.css";
 import {
-  Checkbox,
   IconButton,
   InputAdornment,
   OutlinedInput,
@@ -14,7 +13,7 @@ import { Button, Typography, TextField } from "@mui/material";
 
 import {
   AccountCircle,
-  CheckBox,
+  ArrowBack,
   Email,
   EmailOutlined,
   LockClockOutlined,
@@ -26,7 +25,7 @@ import {
 } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 
-const Login = () => {
+const Signup = () => {
   const [visible, setVisible] = useState(false);
 
   const CustomBtn = styled(Button)({
@@ -40,6 +39,14 @@ const Login = () => {
   return (
     <div className="login ">
       <div className="login__form">
+        <div className=" mr-auto my-2">
+          <NavLink to={"/"}>
+            <IconButton>
+              {" "}
+              <ArrowBack />{" "}
+            </IconButton>
+          </NavLink>
+        </div>
         <Typography
           variant="h4"
           sx={{
@@ -61,6 +68,25 @@ const Login = () => {
             width: "100%",
           }}
           size="small"
+          type={"text"}
+          className="my-2"
+          variant="outlined"
+          placeholder="username"
+          id="input-with-icon-textfield"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <AccountCircle fontSize="small" />
+              </InputAdornment>
+            ),
+          }}
+        />
+        <TextField
+          sx={{
+            width: "100%",
+          }}
+          size="small"
+          type={"email"}
           className="my-2"
           variant="outlined"
           placeholder="username"
@@ -101,6 +127,34 @@ const Login = () => {
             ),
           }}
         />
+        <TextField
+          sx={{
+            width: "100%",
+          }}
+          size="small"
+          className="my-2"
+          variant="outlined"
+          placeholder="confirm password"
+          type={visible ? "text" : "password"}
+          id="input-with-icon-textfield"
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={() => {
+                    setVisible(!visible);
+                  }}
+                >
+                  {visible ? (
+                    <VisibilityOutlined fontSize="small" />
+                  ) : (
+                    <VisibilityOffOutlined fontSize="small" />
+                  )}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+        />
         {/* <CustomText
           width={"100%"}
           size="small"
@@ -121,39 +175,13 @@ const Login = () => {
           }}
         /> */}
 
-        <div className=" my-2 d-flex w-100 align-items-center">
-          <div className=" flex-grow-1">
-            <Checkbox
-              defaultChecked
-              color="primary"
-              inputProps={{ "aria-label": "secondary checkbox" }}
-            />{" "}
-            Remember me
-          </div>
-
-          <div>
-            <NavLink to={""} className=" text-decoration-none">
-              <span>Forgot Password?</span>
-            </NavLink>
-          </div>
-        </div>
-
         <div className="  mt-4 ">
-          <NavLink to={"/signup"}>
-            <CustomBtn
-              className=" my-1"
-              startIcon={<SignLanguageOutlined />}
-              variant="contained"
-            >
-              SIGNIN
-            </CustomBtn>
-          </NavLink>
           <CustomBtn
-            startIcon={<LockClockOutlined />}
+            className=" my-1"
+            startIcon={<SignLanguageOutlined />}
             variant="contained"
-            className=" my-3"
           >
-            lOGIN
+            SIGNIN
           </CustomBtn>
         </div>
       </div>
@@ -161,4 +189,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
