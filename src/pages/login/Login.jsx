@@ -13,9 +13,9 @@ import { Button, Typography, TextField } from "@mui/material";
 
 import {
   AccountCircle,
+  Email,
   EmailOutlined,
-  ExitToAppOutlined,
-  LockOutlined,
+  LockClockOutlined,
   LoginOutlined,
   SignLanguageOutlined,
   VisibilityOff,
@@ -25,19 +25,6 @@ import {
 const Login = () => {
   // styled text field
 
-  const CustomText = styled(TextField)({
-    input: {
-      //   width: "250px",
-      display: "block",
-    },
-    // root: {
-    //   border: "1px solid orange",
-    //   width: "500px",
-    //   "& .MuiOutlinedInput-root": {
-    //     height: "40px",
-    //   },
-    // },
-  });
   // end of styled field
 
   const CustomBtn = styled(Button)({
@@ -55,14 +42,10 @@ const Login = () => {
           Welcome!
         </Typography>
 
-        <CustomText
+        <TextField
           sx={{
             width: "100%",
-            label: {
-              color: "orange",
-            },
           }}
-          label="text"
           size="small"
           className="my-2"
           variant="outlined"
@@ -71,12 +54,12 @@ const Login = () => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <AccountCircle />
+                <Email />
               </InputAdornment>
             ),
           }}
         />
-        <CustomText
+        <TextField
           sx={{
             width: "100%",
           }}
@@ -139,13 +122,13 @@ const Login = () => {
         <div className="  mt-4 ">
           <CustomBtn
             className=" my-1"
-            startIcon={<ExitToAppOutlined />}
+            startIcon={<SignLanguageOutlined />}
             variant="contained"
           >
             SIGNIN
           </CustomBtn>
           <CustomBtn
-            startIcon={<LockOutlined />}
+            startIcon={<LockClockOutlined />}
             variant="contained"
             className=" my-3"
           >
