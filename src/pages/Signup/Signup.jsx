@@ -18,6 +18,7 @@ import {
   EmailOutlined,
   LockClockOutlined,
   LoginOutlined,
+  PersonAdd,
   SignLanguageOutlined,
   VisibilityOff,
   VisibilityOffOutlined,
@@ -89,7 +90,7 @@ const Signup = () => {
           type={"email"}
           className="my-2"
           variant="outlined"
-          placeholder="username"
+          placeholder="Email"
           id="input-with-icon-textfield"
           InputProps={{
             startAdornment: (
@@ -178,7 +179,7 @@ const Signup = () => {
         <div className="  mt-4 ">
           <CustomBtn
             className=" my-1"
-            startIcon={<SignLanguageOutlined />}
+            startIcon={<PersonAdd />}
             variant="contained"
           >
             SIGNIN

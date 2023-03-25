@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./Login.scss";
+import "./Forgot.scss";
 import "../../App.css";
 import {
-  Checkbox,
   IconButton,
   InputAdornment,
   OutlinedInput,
@@ -14,12 +13,13 @@ import { Button, Typography, TextField } from "@mui/material";
 
 import {
   AccountCircle,
-  CheckBox,
+  ArrowBack,
   Email,
   EmailOutlined,
   LockClockOutlined,
   LoginOutlined,
   PersonAdd,
+  Send,
   SignLanguageOutlined,
   VisibilityOff,
   VisibilityOffOutlined,
@@ -27,7 +27,7 @@ import {
 } from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 
-const Login = () => {
+const Forgot = () => {
   const [visible, setVisible] = useState(false);
 
   const CustomBtn = styled(Button)({
@@ -41,6 +41,14 @@ const Login = () => {
   return (
     <div className="login ">
       <div className="login__form">
+        <div className=" mr-auto my-2">
+          <NavLink to={"/"}>
+            <IconButton>
+              {" "}
+              <ArrowBack />{" "}
+            </IconButton>
+          </NavLink>
+        </div>
         <Typography
           variant="h4"
           sx={{
@@ -54,7 +62,7 @@ const Login = () => {
           variant="span"
           className=" my-3 text-center d-block text-black-50 text-capitalize "
         >
-          Start your journey with us today.
+          Verify Your Email
         </Typography>
 
         <TextField
@@ -62,6 +70,7 @@ const Login = () => {
             width: "100%",
           }}
           size="small"
+          type={"text"}
           className="my-2"
           variant="outlined"
           placeholder="username"
@@ -69,39 +78,12 @@ const Login = () => {
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <Email fontSize="small" />
+                <EmailOutlined fontSize="small" />
               </InputAdornment>
             ),
           }}
         />
-        <TextField
-          sx={{
-            width: "100%",
-          }}
-          size="small"
-          className="my-2"
-          variant="outlined"
-          placeholder="password"
-          type={visible ? "text" : "password"}
-          id="input-with-icon-textfield"
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton
-                  onClick={() => {
-                    setVisible(!visible);
-                  }}
-                >
-                  {visible ? (
-                    <VisibilityOutlined fontSize="small" />
-                  ) : (
-                    <VisibilityOffOutlined fontSize="small" />
-                  )}
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
-        />
+
         {/* <CustomText
           width={"100%"}
           size="small"
@@ -122,39 +104,9 @@ const Login = () => {
           }}
         /> */}
 
-        <div className=" my-2 d-flex w-100 align-items-center">
-          <div className=" flex-grow-1">
-            <Checkbox
-              defaultChecked
-              color="primary"
-              inputProps={{ "aria-label": "secondary checkbox" }}
-            />{" "}
-            Remember me
-          </div>
-
-          <div>
-            <NavLink to={"/forgot"} className=" text-decoration-none">
-              <span>Forgot Password?</span>
-            </NavLink>
-          </div>
-        </div>
-
         <div className="  mt-4 ">
-          <NavLink to={"/signup"} className="text-decoration-none">
-            <CustomBtn
-              className=" my-1"
-              startIcon={<PersonAdd />}
-              variant="contained"
-            >
-              Sign_Up
-            </CustomBtn>
-          </NavLink>
-          <CustomBtn
-            startIcon={<LockClockOutlined />}
-            variant="contained"
-            className=" my-3"
-          >
-            Login
+          <CustomBtn className=" my-1" endIcon={<Send />} variant="contained">
+            Submit
           </CustomBtn>
         </div>
       </div>
@@ -162,4 +114,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Forgot;

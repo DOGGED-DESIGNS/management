@@ -1,0 +1,19 @@
+.nav {
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.bat {
+  background: #005a34 !important ;
+  color: white !important ;
+  &:hover {
+    background: #00311d !important ;
+    color: white !important ;
+  }
+}
