@@ -1,4 +1,4 @@
-import Dotbig from "../assets/dotbig.svg";
+import Logo from "../assets/Asset 4.svg";
 
 import Dotsmall from "../assets/dotsmall.svg";
 
@@ -9,9 +9,5 @@ import Bg from "../assets/bg.svg";
 import Secondbanner from "../assets/secondbanner2logopng.svg";
 
 export default {
-  Dotbig,
-  Dotsmall,
-  Secondbg,
-  Bg,
-  Secondbanner,
+  Logo,
 };
