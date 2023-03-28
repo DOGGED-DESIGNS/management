@@ -1,9 +1,9 @@
 .nav {
   background: whitesmoke;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   @media (max-width: 680px) {
-    display: none;
+    display: none !important;
   }
   &__button {
     width: 400px;
@@ -37,10 +37,10 @@
 }
 
 .nav2 {
-  display: none;
+  display: none !important ;
   @media (max-width: 680px) {
     background: whitesmoke;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     display: flex;
     &__button {
