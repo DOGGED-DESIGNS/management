@@ -1,9 +1,8 @@
 import React from "react";
 
 import "../../App.css";
-import Datatable from "../../components/Navbar/datatable/Datatable";
-import Navbar from "../../components/Navbar/Navbar/Navbar";
-import Table from "../../components/Navbar/Table/Table";
+import Datatable from "../../components/datatable/Datatable";
+
 import "./Home.scss";
 
 const Home = () => {

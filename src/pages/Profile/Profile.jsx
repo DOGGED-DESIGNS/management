@@ -15,7 +15,7 @@ import {
   TextField,
 } from "@mui/material";
 import { useState } from "react";
-import Navbar from "../../components/Navbar/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import "../../App.css";
 import "./Profile.scss";
 import { PhotoCamera } from "@mui/icons-material";

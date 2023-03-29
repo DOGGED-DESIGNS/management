@@ -6,7 +6,7 @@ import { Textarea } from "@mui/joy";
 
 import "./Datatable.scss";
 
-import { userColumns, userRows } from "../../../datatablesource";
+import { userColumns, userRows } from "../../datatablesource";
 import {
   Alert,
   Button,

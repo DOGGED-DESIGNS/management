@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Navbar.scss";
-import "../../../App.css";
-import Image from "../../../constants";
+import "../../App.css";
+import Image from "../../constants";
 import { NavLink } from "react-router-dom";
 import {
   Button,
