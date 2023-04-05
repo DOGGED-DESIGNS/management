@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Login.scss";
 import "../../App.css";
 import {
@@ -8,6 +8,8 @@ import {
   OutlinedInput,
   styled,
 } from "@mui/material";
+
+import Loginhook from "../../hooks/Loginhook";
 // import TextField from '@material-ui/core/TextField';
 
 import { Button, Typography, TextField } from "@mui/material";
@@ -28,6 +30,13 @@ import {
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
+  useEffect(() => {
+    console.log(test);
+  }, []);
+  // this is the login hook
+
+  const test = Loginhook();
+
   const [visible, setVisible] = useState(false);
 
   const CustomBtn = styled(Button)({
